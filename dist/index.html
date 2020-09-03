@@ -16,6 +16,22 @@
     </div>
 
 
+    <div id="recipes"></div>
+
+    
+    
+    <script type="text/x-handlebars-template" id="recipeTemplate">
+        {{#each data}}
+        <div class="recepieDiv">
+            <a href={{href}}>{{title}}</a>
+            <img class="recepiePhoto" src="{{thumbnail}}" alt="">
+            {{#each ingredients}}
+            <p class="ingridient">{{this}}</p>
+            {{/each}}
+        </div>
+        {{/each}}
+    </script>
+
     
     
 

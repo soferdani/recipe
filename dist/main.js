@@ -1,4 +1,7 @@
+
 let readyData = []
+const render = new Renderer
+
 const logic = function (dataFromServer){
     readyData = []
     const allTheResepies = dataFromServer.results
@@ -27,7 +30,7 @@ $("#srcBtn").on("click",function(){
         url: `/recipes/${userIngrid}`,
         success: (dataFromServer) => {            
             logic(dataFromServer)
-            console.log(readyData);
+            render.render(readyData)
         },
         error: (xhr,text,error) => {console.log(text)}
     })
