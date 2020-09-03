@@ -1,0 +1,34 @@
+#conteiner {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.searchBar {
+    display: grid;
+}
+
+#recipes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.recepieDiv {
+    display: grid;
+    grid-template-areas: 
+    "h",
+    "c",
+    "ph"   
+}
+
+a {
+    grid-area: h;
+}
+
+.ingridienceList{
+    grid-area: c;
+}
+
+img.recepiePhoto {
+    grid-area: ph;
+    max-width: 50%;
+}

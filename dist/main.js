@@ -35,3 +35,9 @@ $("#srcBtn").on("click",function(){
         error: (xhr,text,error) => {console.log(text)}
     })
 })
+
+$("#recipes").on("click",".recepiePhoto",function (){
+    let firstIngredient = $(this).closest(".recepieDiv").find(".ingridienceList").find("p:first").html()
+    alert(`this is the first ingridient ${firstIngredient}`)
+    console.log(firstIngredient);
+})

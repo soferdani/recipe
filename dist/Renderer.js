@@ -3,7 +3,6 @@ class Renderer {
     }
 
     render (data) {
-        // console.log(data);
         $("#recipes").empty()
         const source = $("#recipeTemplate").html()
         const tamplete = Handlebars.compile(source)

@@ -13,21 +13,23 @@
             <input id="userInput" type="text" placeholder="Put your ingredient">
             <button id="srcBtn">Get Recipe</button>
         </div>
+        
+        
+        <div id="recipes"></div>
+        
     </div>
-
-
-    <div id="recipes"></div>
-
     
-    
+
     <script type="text/x-handlebars-template" id="recipeTemplate">
         {{#each data}}
         <div class="recepieDiv">
             <a href={{href}}>{{title}}</a>
+            <div class="ingridienceList">
+                {{#each ingredients}}
+                <p class="ingridient">{{this}}</p>
+                {{/each}}
+            </div>
             <img class="recepiePhoto" src="{{thumbnail}}" alt="">
-            {{#each ingredients}}
-            <p class="ingridient">{{this}}</p>
-            {{/each}}
         </div>
         {{/each}}
     </script>
